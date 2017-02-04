@@ -30,6 +30,8 @@ namespace MySQL_Connector
                 if (context.SaveChanges() >0)
                 {
                     Console.WriteLine("New Product Created");
+                    Console.ReadLine();
+                    
                 }
               else{
                     Console.WriteLine("Error in Creating Product");
