@@ -22,7 +22,7 @@ Run this command in Package Management Console to download Entity Framework
 </br>
 ` Pm>   Install-Package EntityFramework`
 
-**Reference MySQL Assemblies** (NB.These Assemblies are Available after installing the MYSQL Connector for .Net)
+**Reference MySQL Assemblies** (NB.These Assemblies are Available after installing the MYSQL Connector for .Net you can also get them on Nuget)
 - MySQL.Data
 - MySQL.Data.Entity
 
