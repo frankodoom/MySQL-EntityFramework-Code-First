@@ -99,7 +99,7 @@ PM> Enable-Migrations
 
 Add Code First Migration
 ```
-PM> Add-Migrations [Give Your Migration Settings A name]
+PM> Add-Migration [Give Your Migration Settings A name]
 ```
 
 Update Database (Specify Verbose to see the SQL Querry that is being executed)
@@ -119,7 +119,6 @@ To do so, follow these steps:
 PM> Uninstall-Package MySQL.Data
 PM> Uninstall-Package MySQL.Data.Entity 
 ```
-` PM> Uninstall-Package MySQL.Data `
 3. Install the older packages:
 ```
 PM> Install-Package MySQL.Data -Version [type in the tabulator and you'll see the available versions] `
