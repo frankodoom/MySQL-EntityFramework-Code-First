@@ -2,6 +2,8 @@
 <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" height="100" width="150"/>
 
 MySQL is a Database Management System from Oracle that currently supports Entity Framework through the MySQL ADO.NET Connector a fully-managed ADO.NET driver for MySQL.. I will go through steps in setting up MySQL with Entity framework 6.1.+ Using Visual Studio.
+#### Note: 
+This Tutorial also works with MariaDB.
 
 **PREREQUISITES**
 - Visual Studio<br/>
@@ -97,7 +99,7 @@ PM> Enable-Migrations
 
 Add Code First Migration
 ```
-PM> Add-Migrations [Give Your Migration Settings A name]
+PM> Add-Migration [Give Your Migration Settings A name]
 ```
 
 Update Database (Specify Verbose to see the SQL Querry that is being executed)
@@ -106,3 +108,19 @@ PM> Update-Database -Verbose
 ```
 
 You should see your Product Table Created in Your MySql Server
+
+#### Note:
+If you get a **System.TypeLoadException** when adding a migration, you should try to install a older version of the MySQL packages.
+</br>
+To do so, follow these steps:
+1. Open the Package Manager Console: **Tools > NuGet Package Manager > Package Manager Console**
+2. Uninstall the current Packages:
+``` 
+PM> Uninstall-Package MySQL.Data
+PM> Uninstall-Package MySQL.Data.Entity 
+```
+3. Install the older packages:
+```
+PM> Install-Package MySQL.Data -Version [type in the tabulator and you'll see the available versions] `
+PM> Install-Package MySQL.Data.Entity -Version [select the same version]
+```
